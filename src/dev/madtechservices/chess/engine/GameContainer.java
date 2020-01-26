@@ -18,7 +18,11 @@ public class GameContainer implements Runnable{
     }
 
     public synchronized void stop() {
-
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void run() {
