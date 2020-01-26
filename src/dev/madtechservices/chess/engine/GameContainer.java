@@ -14,7 +14,7 @@ public class GameContainer implements Runnable{
 
     public synchronized void start() {
         thread = new Thread(this);
-        thread.run()
+        thread.run();
     }
 
     public synchronized void stop() {
