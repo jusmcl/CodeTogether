@@ -6,7 +6,7 @@ public class GameContainer implements Runnable{
 
     private boolean running = false;
 
-    private final double FRAME_CAP = 1.0/120;
+    private final double FRAME_CAP = 1.0 / 120;
 
     public GameContainer() {
 
@@ -14,7 +14,7 @@ public class GameContainer implements Runnable{
 
     public synchronized void start() {
         thread = new Thread(this);
-        thread.run()
+        thread.run();
     }
 
     public synchronized void stop() {
