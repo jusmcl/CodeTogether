@@ -9,6 +9,7 @@ public class GameContainer implements Runnable {
     private Window window;
     private Renderer renderer;
     private Input input;
+    private AbstractGame game;
 
     private boolean running = false;
     private final double FRAME_CAP = 1.0 / 60;
@@ -17,8 +18,8 @@ public class GameContainer implements Runnable {
     private int width = 384, height = 216;
     private String title;
 
-    public GameContainer() {
-
+    public GameContainer(AbstractGame game) {
+        this.game = game;
     }
 
     public synchronized void start() {
@@ -60,6 +61,8 @@ public class GameContainer implements Runnable {
                 unProcessedTime -= FRAME_CAP;
                 render = true;
 
+                game.update(this, (float) FRAME_CAP);
+
                 if(input.isButton((MouseEvent.BUTTON1))){
                     System.out.println("left click is pressed.");
                 }
@@ -78,7 +81,8 @@ public class GameContainer implements Runnable {
 
             if(render){
                 renderer.clear();
-                //TODO: render game
+
+                game.render(this, renderer);
 
                 window.update();
                 ++frames;
@@ -138,5 +142,9 @@ public class GameContainer implements Runnable {
 
     public Window getWindow() {
         return window;
+    }
+
+    public Input getInput() {
+        return input;
     }
 }

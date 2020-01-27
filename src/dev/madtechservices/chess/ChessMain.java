@@ -6,8 +6,5 @@ public class ChessMain {
 
     private static GameContainer gameContainer;
 
-    public static void main(String[] args){
-         gameContainer = new GameContainer();
-         gameContainer.start();
-    }
+
 }
