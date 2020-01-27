@@ -1,6 +1,6 @@
 package dev.madtechservices.chess.engine;
 
-public class GameContainer implements Runnable{
+public class GameContainer implements Runnable {
 
     private Thread thread;
     private Window window;
@@ -56,7 +56,7 @@ public class GameContainer implements Runnable{
 
                 //TODO: Update game
 
-                if(frameTime >= 1.0){
+                if(frameTime >= 1.0) {
                     frameTime = 0;
                     fps = frames;
                     frames = 0;

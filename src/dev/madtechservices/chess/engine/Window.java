@@ -10,7 +10,7 @@ public class Window {
     private JFrame frame;
     private BufferedImage pixelData;
     private Canvas canvas;
-    private Graphics g;
+    private Graphics gfx;
     private BufferStrategy bs;
 
 
@@ -34,12 +34,11 @@ public class Window {
 
         canvas.createBufferStrategy(3);
         bs = canvas.getBufferStrategy();
-        g = bs.getDrawGraphics();
-
+        gfx = bs.getDrawGraphics();
     }
 
     public void update() {
-        g.drawImage(pixelData,0, 0, canvas.getWidth(), canvas.getHeight(), null);
+        gfx.drawImage(pixelData,0, 0, canvas.getWidth(), canvas.getHeight(), null);
         bs.show();
     }
 }
