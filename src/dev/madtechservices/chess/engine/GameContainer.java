@@ -61,14 +61,9 @@ public class GameContainer implements Runnable {
                 unProcessedTime -= FRAME_CAP;
                 render = true;
 
-                game.update(this, (float) FRAME_CAP);
-
-                if(input.isButton((MouseEvent.BUTTON1))){
-                    System.out.println("left click is pressed.");
-                }
-
-                input.update();
                 //TODO: Update game
+                game.update(this, (float) FRAME_CAP);
+                input.update();
 
                 if(frameTime >= 1.0) {
                     frameTime = 0;
@@ -81,9 +76,7 @@ public class GameContainer implements Runnable {
 
             if(render){
                 renderer.clear();
-
                 game.render(this, renderer);
-
                 window.update();
                 ++frames;
 
@@ -105,7 +98,7 @@ public class GameContainer implements Runnable {
     }
 
     public void dispose() {
-
+        //TODO delete the game.
     }
 
     public float getScale() {

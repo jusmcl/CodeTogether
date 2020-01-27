@@ -5,6 +5,7 @@ import dev.madtechservices.chess.engine.GameContainer;
 import dev.madtechservices.chess.engine.Renderer;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 
 public class GameManager extends AbstractGame {
 
@@ -15,7 +16,11 @@ public class GameManager extends AbstractGame {
     @Override
     public void update(GameContainer gc, float dt) {
         if (gc.getInput().isKeyDown(KeyEvent.VK_E)) {
-            System.out.println("E was pressed.");
+            System.out.println("E key is pressed.");
+        }
+
+        if(gc.getInput().isButton(MouseEvent.BUTTON1)) {
+            System.out.println("Left mouse button is down.");
         }
     }
 

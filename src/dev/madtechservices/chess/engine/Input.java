@@ -116,10 +116,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         return !keys[keyCode] && keysLast[keyCode];
     }
 
-    public boolean isKeyDown(int keyCode) {
-
-        return keys[keyCode] && !keysLast[keyCode];
-    }
+    public boolean isKeyDown(int keyCode) { return keys[keyCode] && !keysLast[keyCode]; }
 
     public boolean isButton(int button) {
         return buttons[button];
