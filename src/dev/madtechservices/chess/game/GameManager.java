@@ -15,10 +15,13 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void update(GameContainer gc, float dt) {
+
+        // Keyboard input Testing
         if (gc.getInput().isKeyDown(KeyEvent.VK_E)) {
             System.out.println("E key is pressed.");
         }
 
+        // Mouse input Testing
         if(gc.getInput().isButton(MouseEvent.BUTTON1)) {
             System.out.println("Left mouse button is down.");
         }
