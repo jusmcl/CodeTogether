@@ -16,7 +16,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     private int mouseX, mouseY;
     private int scroll;
 
-    public Input(GameContainer gc){
+    public Input(GameContainer gc) {
         this.gc = gc;
         mouseX = 0;
         mouseY = 0;
@@ -28,7 +28,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         gc.getWindow().getCanvas().addMouseWheelListener(this);
     }
 
-    public void update(){
+    public void update() {
         scroll = 0;
 
         for(int i = 0; i < NUM_KEYS; i++){
@@ -109,7 +109,6 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public boolean isKey(int keyCode) {
-        System.out.println(keyCode);
         return keys[keyCode];
     }
 
@@ -118,12 +117,11 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public boolean isKeyDown(int keyCode) {
-        System.out.println(keyCode);
+
         return keys[keyCode] && !keysLast[keyCode];
     }
 
     public boolean isButton(int button) {
-        System.out.println(button);
         return buttons[button];
     }
 
@@ -132,7 +130,6 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public boolean isButtonDown(int button) {
-        System.out.println(button);
         return buttons[button] && !keysLast[button];
     }
 
