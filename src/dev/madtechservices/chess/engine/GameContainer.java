@@ -1,10 +1,14 @@
 package dev.madtechservices.chess.engine;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+
 public class GameContainer implements Runnable {
 
     private Thread thread;
     private Window window;
     private Renderer renderer;
+    private Input input;
 
     private boolean running = false;
     private final double FRAME_CAP = 1.0 / 60;
@@ -20,6 +24,7 @@ public class GameContainer implements Runnable {
     public synchronized void start() {
         window = new Window(this);
         renderer = new Renderer(this);
+        input = new Input(this);
         thread = new Thread(this);
         thread.run();
     }
@@ -55,6 +60,9 @@ public class GameContainer implements Runnable {
                 unProcessedTime -= FRAME_CAP;
                 render = true;
 
+                if(input.isButton((MouseEvent.BUTTON2))){
+                    System.out.println("A is pressed.");
+                }
                 //TODO: Update game
 
                 if(frameTime >= 1.0) {

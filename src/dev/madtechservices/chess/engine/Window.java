@@ -14,6 +14,10 @@ public class Window {
     private BufferStrategy bs;
 
 
+    public JFrame getFrame() {
+        return frame;
+    }
+
     public Window(GameContainer gc) {
         pixelData = new BufferedImage(gc.getWidth(), gc.getHeight(), BufferedImage.TYPE_INT_RGB);
         canvas = new Canvas();
