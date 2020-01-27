@@ -60,9 +60,11 @@ public class GameContainer implements Runnable {
                 unProcessedTime -= FRAME_CAP;
                 render = true;
 
-                if(input.isButton((MouseEvent.BUTTON2))){
-                    System.out.println("A is pressed.");
+                if(input.isButton((MouseEvent.BUTTON1))){
+                    System.out.println("left click is pressed.");
                 }
+
+                input.update();
                 //TODO: Update game
 
                 if(frameTime >= 1.0) {

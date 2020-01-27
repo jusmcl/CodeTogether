@@ -12,8 +12,7 @@ public class Window {
     private Canvas canvas;
     private Graphics gfx;
     private BufferStrategy bs;
-
-
+    
     public JFrame getFrame() {
         return frame;
     }

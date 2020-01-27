@@ -9,7 +9,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     private boolean[] keys = new boolean[NUM_KEYS];
     private boolean[] keysLast = new boolean[NUM_KEYS];
 
-    private final int NUM_BUTTONS = 3;
+    private final int NUM_BUTTONS = 5;
     private boolean[] buttons = new boolean[NUM_BUTTONS];
     private boolean[] buttonsLast = new boolean[NUM_BUTTONS];
 
@@ -29,11 +29,11 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public void update(){
-        for(int i = 0; i < NUM_KEYS; ++i){
+        for(int i = 0; i < NUM_KEYS; i++){
             keysLast[i] = keys[i];
         }
 
-        for(int i = 0; i < NUM_BUTTONS; ++i){
+        for(int i = 0; i < NUM_BUTTONS; i++){
             buttonsLast[i] = buttons[i];
         }
     }
@@ -107,6 +107,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public boolean isKey(int keyCode) {
+        System.out.println(keyCode);
         return keys[keyCode];
     }
 
@@ -115,10 +116,12 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public boolean isKeyDown(int keyCode) {
+        System.out.println(keyCode);
         return keys[keyCode] && !keysLast[keyCode];
     }
 
     public boolean isButton(int button) {
+        System.out.println(button);
         return buttons[button];
     }
 
@@ -127,6 +130,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     }
 
     public boolean isButtonDown(int button) {
+        System.out.println(button);
         return buttons[button] && !keysLast[button];
     }
 
