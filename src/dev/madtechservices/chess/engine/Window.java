@@ -42,4 +42,12 @@ public class Window {
         g.drawImage(pixelData,0, 0, canvas.getWidth(), canvas.getHeight(), null);
         bs.show();
     }
+
+    public BufferedImage getPixelData() {
+        return pixelData;
+    }
+
+    public Canvas getCanvas() {
+        return canvas;
+    }
 }
