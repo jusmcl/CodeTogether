@@ -13,10 +13,10 @@ public class GameContainer implements Runnable {
 
     private boolean running = false;
     private final double FRAME_CAP = 1.0 / 60;
-
     private float scale = 1f;
     private int width = 384, height = 216;
     private String title;
+    private short threadSleepT = 5;
 
     public GameContainer(AbstractGame game) {
         this.game = game;
@@ -81,14 +81,14 @@ public class GameContainer implements Runnable {
                 ++frames;
 
                 try {
-                    Thread.sleep(5);
+                    Thread.sleep(threadSleepT);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
 
             try {
-                Thread.sleep(5);
+                Thread.sleep(threadSleepT);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
