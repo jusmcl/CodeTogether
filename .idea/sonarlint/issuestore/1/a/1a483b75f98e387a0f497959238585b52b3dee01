@@ -1,0 +1,14 @@
+
+¤squid:S1186;"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ä Ïúüÿÿÿÿ8©º«ş-
+ksquid:S00116"SRename this field "NUM_KEYS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬±Ö
+zsquid:S4144Z"\Update this method so that its implementation is not identical to "mouseDragged" on line 84.(ç¨Î§8©º«ş-
+=squid:S1170"!Make this final field static too.(éÔÊüùÿÿÿÿ
+Fsquid:S1068"*Remove this unused "scroll" private field.(„ãÁìÿÿÿÿÿ
+8squid:S1170"!Make this final field static too.(¬±Ö
+wsquid:S3012#"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Œ–å’8©º«ş-
+|squid:S3012'"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(²íúúÿÿÿÿ8©º«ş-
+¤squid:S1186O"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•ßçùÿÿÿÿ8©º«ş-
+ssquid:S00116"VRename this field "NUM_BUTTONS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÔÊüùÿÿÿÿ
+¤squid:S1186J"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ö„˜şúÿÿÿÿ8©º«ş-
+Ÿsquid:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷—8©º«ş-
+@squid:S1659"$Declare "mouseY" on a separate line.(ÄÀëÛıÿÿÿÿ

@@ -1,0 +1,6 @@
+
+?squid:S1068"(Remove this unused "px_W" private field.(«θυ
+gsquid:S00116"ORename this field "px_H" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«θυ
+?squid:S1068"(Remove this unused "px_H" private field.(«θυ
+9squid:S1659""Declare "px_H" on a separate line.(«θυ
+gsquid:S00116"ORename this field "px_W" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«θυ
