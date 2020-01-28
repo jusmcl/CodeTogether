@@ -58,6 +58,7 @@ public class GameContainer implements Runnable {
             unProcessedTime += passedTime;
             frameTime += passedTime;
 
+            //Prevent the frame delay from going above a certain fraction of 1.
             while(unProcessedTime >= FRAME_CAP){
                 unProcessedTime -= FRAME_CAP;
                 render = true;
@@ -79,9 +80,10 @@ public class GameContainer implements Runnable {
                 renderer.clear();
                 game.render(this, renderer);
                 window.update();
+                //Calculate the number of frames per second.
                 ++frames;
 
-                //Sleep to lower CPU useage.
+                //Sleep to lower CPU usage.
                 try {
                     Thread.sleep(threadSleepT);
                 } catch (InterruptedException e) {

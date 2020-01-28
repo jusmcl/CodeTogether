@@ -121,9 +121,6 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         this.mouseY = mouseY;
     }
 
-
-
-    //Mouse interface.
     public boolean isButton(int button) {
         return mouseButtons[button];
     }

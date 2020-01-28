@@ -14,6 +14,7 @@ public class Renderer {
         pixels = ((DataBufferInt) gc.getWindow().getPixelData().getRaster().getDataBuffer()).getData();
     }
 
+    //Set the screen to a single color and overwrite the pixel data.
     public void clear() {
         Arrays.fill(pixels, 0);
     }
