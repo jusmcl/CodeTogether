@@ -32,8 +32,8 @@ public class GameManager extends AbstractGame {
         }
 
         // Right mouse button input testing
-        if(gc.getInput().isButtonDown(MouseEvent.BUTTON2)) {
-            System.out.println("Middle mouse button is down.");
+        if(gc.getInput().isButtonDown(MouseEvent.BUTTON3)) {
+            System.out.println("Right mouse button is down.");
         }
     }
 
