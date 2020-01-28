@@ -17,7 +17,7 @@ public class GameContainer implements Runnable {
     private float scale = 1f;
     private int width = 384, height = 216;
     private String title;
-    private short threadSleepT = 5;
+    private short threadSleepT = 1;
 
     public GameContainer(AbstractGame game) {
         this.game = game;
