@@ -21,14 +21,19 @@ public class GameManager extends AbstractGame {
             System.out.println("E key is pressed.");
         }
 
-        // Mouse1 input Testing
+        // Left mouse button input testing
         if(gc.getInput().isButtonDown(MouseEvent.BUTTON1)) {
             System.out.println("Left mouse button is down.");
         }
 
-        // Mouse2 input Testing
-        if(gc.getInput().isButton(MouseEvent.BUTTON2)) {
-            System.out.println("Right mouse button is down.");
+        // Middle mouse button input testing
+        if(gc.getInput().isButtonDown(MouseEvent.BUTTON2)) {
+            System.out.println("Middle mouse button is down.");
+        }
+
+        // Right mouse button input testing
+        if(gc.getInput().isButtonDown(MouseEvent.BUTTON2)) {
+            System.out.println("Middle mouse button is down.");
         }
     }
 
