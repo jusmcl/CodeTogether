@@ -1,6 +1,7 @@
 package dev.madtechservices.chess.engine;
 
 import java.awt.image.DataBufferInt;
+import java.util.Arrays;
 
 public class Renderer {
 
@@ -14,8 +15,6 @@ public class Renderer {
     }
 
     public void clear() {
-        for (int i = 0; i < pixels.length; i++) {
-            pixels[i] = 0;
-        }
+        Arrays.fill(pixels, 0);
     }
 }
