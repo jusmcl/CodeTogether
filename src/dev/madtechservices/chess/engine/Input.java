@@ -2,6 +2,7 @@ package dev.madtechservices.chess.engine;
 
 import java.awt.event.*;
 
+//Interface with computer input methods.
 public class Input implements KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
     private GameContainer gc;
 
@@ -40,6 +41,7 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         }
     }
 
+    //Keyboard interfacing.
     @Override
     public void keyTyped(KeyEvent e) {
 
@@ -55,6 +57,17 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         keys[e.getKeyCode()] = false;
     }
 
+    public boolean isKey(int keyCode) {
+        return keys[keyCode];
+    }
+
+    public boolean isKeyUp(int keyCode) {
+        return !keys[keyCode] && keysLast[keyCode];
+    }
+
+    public boolean isKeyDown(int keyCode) { return keys[keyCode] && !keysLast[keyCode]; }
+
+    //Mouse interfacing.
     @Override
     public void mouseClicked(MouseEvent e) {
 
@@ -108,16 +121,9 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
         this.mouseY = mouseY;
     }
 
-    public boolean isKey(int keyCode) {
-        return keys[keyCode];
-    }
 
-    public boolean isKeyUp(int keyCode) {
-        return !keys[keyCode] && keysLast[keyCode];
-    }
 
-    public boolean isKeyDown(int keyCode) { return keys[keyCode] && !keysLast[keyCode]; }
-
+    //Mouse interface.
     public boolean isButton(int button) {
         return mouseButtons[button];
     }
