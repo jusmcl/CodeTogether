@@ -50,8 +50,8 @@ public class GameContainer implements Runnable {
 
         while (running) {
             render = false;
+            //Calculate elapsed time in 1 frame.
             firstTime = System.nanoTime() / 1000000000.0;
-
             passedTime = firstTime - lastTime;
             lastTime = firstTime;
             unProcessedTime += passedTime;
@@ -80,6 +80,7 @@ public class GameContainer implements Runnable {
                 window.update();
                 ++frames;
 
+                //Sleep to lower CPU useage.
                 try {
                     Thread.sleep(threadSleepT);
                 } catch (InterruptedException e) {
