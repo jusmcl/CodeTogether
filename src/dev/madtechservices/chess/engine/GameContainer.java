@@ -17,6 +17,7 @@ public class GameContainer implements Runnable {
     private float scale = 1f;
     private int width = 384, height = 216;
     private String title;
+    private short threadSleepT = 5;
 
     public GameContainer(AbstractGame game) {
         this.game = game;
@@ -81,14 +82,14 @@ public class GameContainer implements Runnable {
                 ++frames;
 
                 try {
-                    Thread.sleep(1);
+                    Thread.sleep(threadSleepT);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
 
             try {
-                Thread.sleep(1);
+                Thread.sleep(threadSleepT);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

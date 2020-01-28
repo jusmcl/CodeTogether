@@ -9,9 +9,9 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     private boolean[] keys = new boolean[NUM_KEYS];
     private boolean[] keysLast = new boolean[NUM_KEYS];
 
-    private final int NUM_BUTTONS = 5;
-    private boolean[] buttons = new boolean[NUM_BUTTONS];
-    private boolean[] buttonsLast = new boolean[NUM_BUTTONS];
+    private final int NUM_MOUSE_BUTTONS = 5;
+    private boolean[] mouseButtons = new boolean[NUM_MOUSE_BUTTONS];
+    private boolean[] mouseButtonsLast = new boolean[NUM_MOUSE_BUTTONS];
 
     private int mouseX, mouseY;
     private int scroll;
@@ -35,8 +35,8 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
             keysLast[i] = keys[i];
         }
 
-        for(int i = 0; i < NUM_BUTTONS; i++){
-            buttonsLast[i] = buttons[i];
+        for(int i = 0; i < NUM_MOUSE_BUTTONS; i++){
+            mouseButtonsLast[i] = mouseButtons[i];
         }
     }
 
@@ -62,12 +62,12 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
 
     @Override
     public void mousePressed(MouseEvent e) {
-        buttons[e.getButton()] = true;
+        mouseButtons[e.getButton()] = true;
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        buttons[e.getButton()] = false;
+        mouseButtons[e.getButton()] = false;
     }
 
     @Override
@@ -119,15 +119,15 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
     public boolean isKeyDown(int keyCode) { return keys[keyCode] && !keysLast[keyCode]; }
 
     public boolean isButton(int button) {
-        return buttons[button];
+        return mouseButtons[button];
     }
 
     public boolean isButtonUp(int button) {
-        return !buttons[button] && keysLast[button];
+        return !mouseButtons[button] && keysLast[button];
     }
 
     public boolean isButtonDown(int button) {
-        return buttons[button] && !keysLast[button];
+        return mouseButtons[button] && !mouseButtonsLast[button];
     }
 
     @Override
