@@ -1,4 +1,4 @@
-package gfx;
+package dev.madtechservices.chess.engine.gfx;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -9,17 +9,17 @@ public class Image {
     private int[] p;
 
     public Image(String path) {
-        BufferedImage image = new BufferedImage();
+        BufferedImage image = new null;
         try {
             image = ImageIO.read(Image.class.getResourceAsStream(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-    w = image.getWidth();
-    h = image.getHeight();
-    p = image.getRGB(0,0,w,h,null,0,w);
-    image.flush();
+        w = image.getWidth();
+        h = image.getHeight();
+        p = image.getRGB(0,0,w,h,null,0,w);
+        image.flush();
     }
 
     public int getW() {

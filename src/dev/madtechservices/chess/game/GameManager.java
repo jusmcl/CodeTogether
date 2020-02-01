@@ -3,7 +3,7 @@ package dev.madtechservices.chess.game;
 import dev.madtechservices.chess.engine.AbstractGame;
 import dev.madtechservices.chess.engine.GameContainer;
 import dev.madtechservices.chess.engine.Renderer;
-import gfx.Image;
+import dev.madtechservices.chess.engine.gfx.Image;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
