@@ -3,14 +3,17 @@ package dev.madtechservices.chess.game;
 import dev.madtechservices.chess.engine.AbstractGame;
 import dev.madtechservices.chess.engine.GameContainer;
 import dev.madtechservices.chess.engine.Renderer;
+import gfx.Image;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class GameManager extends AbstractGame {
 
-    public GameManager() {
+    private Image image;
 
+    public GameManager() {
+        image = new Image("/CodeTogether/res/test.png");
     }
 
     @Override
@@ -39,7 +42,7 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void render(GameContainer gc, Renderer r) {
-
+        r.drawImage(image, gc.getInput().getMouseX(), gc.getInput().getMouseY());
     }
 
     public static void main(String args[]) {
