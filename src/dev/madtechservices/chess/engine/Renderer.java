@@ -1,6 +1,6 @@
 package dev.madtechservices.chess.engine;
 
-import gfx.Image;
+import dev.madtechservices.chess.engine.gfx.Image;
 
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
