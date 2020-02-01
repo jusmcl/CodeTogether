@@ -16,5 +16,8 @@ public class Renderer {
 
     public void clear() {
         Arrays.fill(pixels, 0);
+//        for (int i = 0; i < pixels.length; i++) {
+//            pixels[i] += i;
+//        }
     }
 }

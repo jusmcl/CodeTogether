@@ -1,6 +1,7 @@
 
-?squid:S1068"(Remove this unused "px_W" private field.(«˜èõ
-gsquid:S00116"ORename this field "px_H" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«˜èõ
-?squid:S1068"(Remove this unused "px_H" private field.(«˜èõ
-9squid:S1659""Declare "px_H" on a separate line.(«˜èõ
-gsquid:S00116"ORename this field "px_W" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«˜èõ
+Fsquid:S1068"(Remove this unused "px_H" private field.(«˜èõ8ÏÑşĞş-
+nsquid:S00116"ORename this field "px_W" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«˜èõ8ÏÑşĞş-
+nsquid:S00116"ORename this field "px_H" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«˜èõ8ÏÑşĞş-
+Fsquid:S1068"(Remove this unused "px_W" private field.(«˜èõ8ÏÑşĞş-
+@squid:S1659""Declare "px_H" on a separate line.(«˜èõ8ÏÑşĞş-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿˜£ø8òÈİş-

@@ -1,8 +1,12 @@
 
-¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÿ úúÿÿÿÿ8˜ò˜«ş-
 [
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ»Øàıÿÿÿÿ8‡ÀÌÉş-
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ»Øàıÿÿÿÿ8Ôø†Ñş-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(æ•Œ’üÿÿÿÿ8ĞË„Ñş-
 Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ïÖéÔ8‡ÀÌÉş-
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(•ÊÓıüÿÿÿÿ8‡ÀÌÉş-
-[squid:S1197#"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8õÀ™«ş-
+[
+squid:S106$"9Replace this use of System.out or System.err by a logger.(Ã†ßşÿÿÿÿ8š©•Ñş-
+¤squid:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÿ úúÿÿÿÿ8ĞË„Ñş-
+[squid:S1197-"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8ĞË„Ñş-

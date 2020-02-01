@@ -62,7 +62,6 @@ public class GameContainer implements Runnable {
                 unProcessedTime -= FRAME_CAP;
                 render = true;
 
-                //TODO: Update game
                 game.update(this, (float) FRAME_CAP);
                 input.update();
 

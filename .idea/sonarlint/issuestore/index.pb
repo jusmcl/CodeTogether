@@ -13,3 +13,5 @@ f
 6src/dev/madtechservices/chess/engine/AbstractGame.java,5\1\51f98a8cb6955e43423b73a70cf292ee16948c89
 c
 3src/dev/madtechservices/chess/game/GameManager.java,8\a\8aada54ff9e37b9c64f666c6ebbe5737b284086f
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
