@@ -6,6 +6,6 @@ import dev.madtechservices.chess.engine.Renderer;
 
 public class ChessMain {
     private static AbstractGame abstractGame;
-    private  GameContainer gameContainer = new GameContainer(abstractGame);
+    private static GameContainer gameContainer = new GameContainer(abstractGame);
 
 }
