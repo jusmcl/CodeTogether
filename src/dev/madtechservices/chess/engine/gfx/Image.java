@@ -2,6 +2,7 @@ package dev.madtechservices.chess.engine.gfx;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Image {
@@ -11,14 +12,14 @@ public class Image {
     public Image(String path) {
         BufferedImage image = null;
         try {
-            image = ImageIO.read(Image.class.getResourceAsStream(path));
+            image = ImageIO.read(new FileInputStream(path));//ImageIO.read(new FileInputStream(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         w = image.getWidth();
         h = image.getHeight();
-        p = image.getRGB(0,0,w,h,null,0,w);
+        p = image.getRGB(0, 0, w, h, null, 0, w);
         image.flush();
     }
 
