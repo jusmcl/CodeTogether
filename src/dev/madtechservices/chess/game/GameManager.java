@@ -13,7 +13,7 @@ public class GameManager extends AbstractGame {
     private Image image;
 
     public GameManager() {
-        image = new Image("/CodeTogether/res/test.png");
+        image = new Image("./res/test.png");
     }
 
     @Override
