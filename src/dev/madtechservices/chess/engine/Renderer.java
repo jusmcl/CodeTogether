@@ -7,12 +7,12 @@ import java.util.Arrays;
 
 public class Renderer {
 
-    private int px_W, px_H;
+    private int pix_W, pix_H;
     private int[] pixels;
 
     public Renderer(GameContainer gc) {
-        px_W = gc.getWidth();
-        px_H = gc.getHeight();
+        pix_W = gc.getWidth();
+        pix_H = gc.getHeight();
         pixels = ((DataBufferInt) gc.getWindow().getPixelData().getRaster().getDataBuffer()).getData();
     }
 
@@ -22,16 +22,39 @@ public class Renderer {
     }
 
     public void setPixel(int x, int y, int value){
-        if((x < 0 || x >= px_W || y < 0 || y >= px_H) || value == 0xffff00ff) {
+        if((x < 0 || x >= pix_W || y < 0 || y >= pix_H) || value == 0xffff00ff) {
             return;
         }
 
-        pixels[x + y * px_W] = value;
+        pixels[x + y * pix_W] = value;
     }
 
-    public void drawImage(Image image, int offX, int offY){
-        for(int y = 0; y < image.getH(); y++){
-            for(int x = 0 ; x < image.getW(); x++){
+    public void drawImage(Image image, int offX, int offY) {
+
+
+        //#Dont render code
+        if(offX < -image.getW()) return;
+        if(offY < -image.getH()) return;
+        if(offX >= pix_W) { return; };
+        if(offY >= pix_H) { return; };
+
+        int newX = 0;
+        int newY = 0;
+        int newWidth = image.getW();
+        int newHeight = image.getH();
+
+        //Clipping code.
+        if(offX < 0) { newX -= offX; }
+        if(offY < 0) { newY -= offY; }
+        if (newWidth + offX >= pix_W) {
+            newWidth -= newWidth + offX - pix_W;
+        }
+        if (newHeight + offY >= pix_H){
+            newHeight -= newHeight + offY - pix_H;
+        }
+
+        for(int y = newY; y < newHeight; y++){
+            for(int x = newX ; x < newWidth; x++){
                 setPixel(x + offX, y + offY, image.getP()[x + y * image.getW()]);
             }
         }
