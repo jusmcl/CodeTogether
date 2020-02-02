@@ -68,8 +68,8 @@ public class Renderer {
         // don't Render pixels off the screen
         if (offX < -tile.getTileWidth()) return;
         if (offY < -tile.getTileHeight()) return;
-        if (offX >= px_H) return;
-        if (offY >= px_W) return;
+        if (offX >= pix_W) return;
+        if (offY >= pix_W) return;
 
         int newX = 0;
         int newY = 0;
@@ -79,8 +79,8 @@ public class Renderer {
         // clipping code
         if (offX < 0) { newX -= offX;}
         if (offY < 0) { newY -= offY;}
-        if (newWidth + offX >= px_W) { newWidth -= newWidth + offX - px_W;}
-        if (newHeight + offY >= px_H) { newHeight -= newHeight + offY - px_H;}
+        if (newWidth + offX >= pix_W) { newWidth -= newWidth + offX - pix_W;}
+        if (newHeight + offY >= pix_W) { newHeight -= newHeight + offY - pix_W;}
 
         for (int y = newY; y < newHeight; y++) {
             for (int x = newX; x < newWidth; x++) {
