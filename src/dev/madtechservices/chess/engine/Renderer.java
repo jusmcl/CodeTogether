@@ -1,6 +1,7 @@
 package dev.madtechservices.chess.engine;
 
 import dev.madtechservices.chess.engine.gfx.Image;
+import dev.madtechservices.chess.engine.gfx.ImageTile;
 
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
@@ -36,6 +37,31 @@ public class Renderer {
         for(int y = 0; y < image.getH(); y++){
             for(int x = 0 ; x < image.getW(); x++){
                 setPixel(x + offX, y + offY, image.getP()[x + y * image.getW()]);
+            }
+        }
+    }
+
+    public void drawImageTile(ImageTile tile, int offX, int offY, int tileX, int tileY) {
+        // don't Render pixels off the screen
+        if (offX < -tile.getTileWidth()) return;
+        if (offY < -tile.getTileHeight()) return;
+        if (offX >= px_H) return;
+        if (offY >= px_W) return;
+
+        int newX = 0;
+        int newY = 0;
+        int newWidth = tile.getTileWidth();
+        int newHeight = tile.getTileHeight();
+
+        // clipping code
+        if (offX < 0) { newX -= offX;}
+        if (offY < 0) { newY -= offY;}
+        if (newWidth + offX >= px_W) { newWidth -= newWidth + offX - px_W;}
+        if (newHeight + offY >= px_H) { newHeight -= newHeight + offY - px_H;}
+
+        for (int y = newY; y < newHeight; y++) {
+            for (int x = newX; x < newWidth; x++) {
+                setPixel(x + offX, y + offY, tile.getP()[ (x + tileX * tile.getTileWidth() ) + (y + tileY * tile.getTileHeight()) * tile.getW()]);
             }
         }
     }

@@ -15,3 +15,5 @@ c
 3src/dev/madtechservices/chess/game/GameManager.java,8\a\8aada54ff9e37b9c64f666c6ebbe5737b284086f
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+c
+3src/dev/madtechservices/chess/engine/gfx/Image.java,3\1\311acf846e26ae963253660b4d1eeab0a8065508
