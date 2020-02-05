@@ -1,10 +1,10 @@
 
 [
-squid:S106"9Replace this use of System.out or System.err by a logger.(•ÊÓýüÿÿÿÿ8¿¤€üÿ-
+squid:S106'"9Replace this use of System.out or System.err by a logger.(Ã†ßŽþÿÿÿÿ8±ú×ë€.
 [
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ»Øàýÿÿÿÿ8¿¤€üÿ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ»Øàýÿÿÿÿ8‡ÀÌÉþ-
 [
-squid:S106""9Replace this use of System.out or System.err by a logger.(æ•Œ’üÿÿÿÿ8¿¤€üÿ-
+squid:S106""9Replace this use of System.out or System.err by a logger.(æ•Œ’üÿÿÿÿ8±ú×ë€.
+[squid:S11970"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿ8õÀ™«þ-
 [
-squid:S106'"9Replace this use of System.out or System.err by a logger.(Ã†ßŽþÿÿÿÿ8¿¤€üÿ-
-[squid:S11970"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿ8¿¤€üÿ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(•ÊÓýüÿÿÿÿ8‡ÀÌÉþ-
