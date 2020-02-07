@@ -1,20 +1,20 @@
 
+dsquid:S2142%"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÚÕşĞş-
+Psquid:S1659-"-Declare "unProcessedTime" on a separate line.(šõ¾Äûÿÿÿÿ8ÚÕşĞş-
+Isquid:S1659-"&Declare "lastTime" on a separate line.(šõ¾Äûÿÿÿÿ8ÚÕşĞş-
+Xsquid:UselessImportCheck"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ğİÍ
+dsquid:S2142_"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¦¿ÌÉş-
+asquid:UselessImportCheck"6Remove this unused import 'java.awt.event.MouseEvent'.(›õ8¦¿ÌÉş-
+ysquid:S1450"VRemove the "running" field and declare it as a local variable in the relevant methods.(Îï®¡ùÿÿÿÿ8âå¹«ş-
+Ksquid:S1659-"(Declare "passedTime" on a separate line.(šõ¾Äûÿÿÿÿ8ÚÕşĞş-
 dsquid:S2142X"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÚÕşĞş-
 Gsquid:S1659"$Declare "height" on a separate line.(ÃÓóØøÿÿÿÿ8âå¹«ş-
-ysquid:S1450"VRemove the "running" field and declare it as a local variable in the relevant methods.(Îï®¡ùÿÿÿÿ8âå¹«ş-
 ~squid:S1217"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(—ú÷Ú8ÚÕşĞş-
+Fsquid:S1148Y"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÚÕşĞş-
 Fsquid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÚÕşĞş-
 Dsquid:S1170"!Make this final field static too.(şÔƒ±øÿÿÿÿ8âå¹«ş-
-Fsquid:S1148`"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¦¿ÌÉş-
-dsquid:S2142_"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¦¿ÌÉş-
 xsquid:S00116"TRename this field "FRAME_CAP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÔƒ±øÿÿÿÿ8âå¹«ş-
-Psquid:S1659-"-Declare "unProcessedTime" on a separate line.(šõ¾Äûÿÿÿÿ8ÚÕşĞş-
-Fsquid:S1148Y"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÚÕşĞş-
-Xsquid:UselessImportCheck"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ğİÍ
-Ksquid:S1659-"(Declare "passedTime" on a separate line.(šõ¾Äûÿÿÿÿ8ÚÕşĞş-
-asquid:UselessImportCheck"6Remove this unused import 'java.awt.event.MouseEvent'.(›õ8¦¿ÌÉş-
-Psquid:S1135h"2Complete the task associated to this TODO comment.(ç×ì†8¦¿ÌÉş-
-dsquid:S2142%"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÚÕşĞş-
-Isquid:S1659-"&Declare "lastTime" on a separate line.(šõ¾Äûÿÿÿÿ8ÚÕşĞş-
 [
 squid:S106J"9Replace this use of System.out or System.err by a logger.(²—™íøÿÿÿÿ8¿ù€ûÿ-
+Psquid:S1135h"2Complete the task associated to this TODO comment.(ç×ì†8¦¿ÌÉş-
+Fsquid:S1148`"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¦¿ÌÉş-

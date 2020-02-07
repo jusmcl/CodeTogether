@@ -1,4 +1,5 @@
 
-Osquid:S1068"1Remove this unused "gameContainer" private field.(úş±‚8·ÁÌÉş-
-Xsquid:S1118":Add a private constructor to hide the implicit public one.(µ¥¹¿8Ë«ş-
-vsquid:UselessImportCheck"FRemove this unused import 'dev.madtechservices.chess.engine.Renderer'.(ˆ›ã´ÿÿÿÿÿ8³û€ûÿ-
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(µ¥¹¿8­¦€.
+Osquid:S1068	"1Remove this unused "gameContainer" private field.(ÊÌßÜ8­¦€.
+vsquid:UselessImportCheck"FRemove this unused import 'dev.madtechservices.chess.engine.Renderer'.(ˆ›ã´ÿÿÿÿÿ8­¦€.
+Nsquid:S1068"0Remove this unused "abstractGame" private field.(ààÙ8°ª€.
