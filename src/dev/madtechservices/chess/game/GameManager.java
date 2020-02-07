@@ -3,6 +3,7 @@ package dev.madtechservices.chess.game;
 import dev.madtechservices.chess.engine.AbstractGame;
 import dev.madtechservices.chess.engine.GameContainer;
 import dev.madtechservices.chess.engine.Renderer;
+import dev.madtechservices.chess.engine.audio.SoundClip;
 import dev.madtechservices.chess.engine.gfx.Image;
 
 import java.awt.event.KeyEvent;
@@ -11,9 +12,12 @@ import java.awt.event.MouseEvent;
 public class GameManager extends AbstractGame {
 
     private Image image;
+    private SoundClip clip;
 
     public GameManager() {
         image = new Image("./res/test.png");
+        clip = new SoundClip("./res/audio/test.wav");
+        clip.setVolume(-20);
     }
 
     @Override
@@ -21,6 +25,7 @@ public class GameManager extends AbstractGame {
 
         // Keyboard input Testing
         if (gc.getInput().isKeyDown(KeyEvent.VK_E)) {
+            clip.play();
             System.out.println("E key is pressed.");
         }
 
