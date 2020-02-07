@@ -1,5 +1,6 @@
 package dev.madtechservices.chess.engine;
 
+import dev.madtechservices.chess.engine.gfx.Font;
 import dev.madtechservices.chess.engine.gfx.Image;
 import dev.madtechservices.chess.engine.gfx.ImageTile;
 
@@ -10,6 +11,7 @@ public class Renderer {
 
     private int pix_W, pix_H;
     private int[] pixels;
+    private Font font;
 
     public Renderer(GameContainer gc) {
         pix_W = gc.getWidth();
@@ -20,19 +22,38 @@ public class Renderer {
     //Set the screen to a single color and overwrite the pixel data.
     public void clear() {
         Arrays.fill(pixels, 0);
-//        for (int i = 0; i < pixels.length; i++) {
+//        for (int i = 0; i < pixels.length; i++){
 //            pixels[i] += i;
 //        }
     }
 
     public void setPixel(int x, int y, int value){
-        if((x < 0 || x >= pix_W || y < 0 || y >= pix_H) || value == 0xffff00ff) {
+        if ((x < 0 || x >= pix_W || y < 0 || y >= pix_H) || value == 0xffff00ff) {
             return;
         }
 
         pixels[x + y * pix_W] = value;
     }
 
+    public void drawText(String text, int offX, int offY, int color){
+
+        text = text.toUpperCase();
+        int offset = 0;
+
+        for (int i = 0; i < text.length(); i++){
+            int unicode = text.codePointAt(i) - 32;
+
+            for(int y = 0; y < font.getFontImage().getH(); y++) {
+                for (int x = 0; x < font.getWidths()[unicode]; x++) {
+                    if (font.getFontImage().getP()[x + font.getOffsets()[unicode] + y * font.getFontImage().getW()] == 0xffffffff) {
+                        setPixel(x + offX + offset, y + offY, color);
+                    }
+                }
+            }
+
+            offset += font.getWidths()[unicode];
+        }
+    }
     public void drawImage(Image image, int offX, int offY) {
 
 
