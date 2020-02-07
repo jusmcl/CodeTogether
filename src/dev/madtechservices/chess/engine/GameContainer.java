@@ -70,8 +70,6 @@ public class GameContainer implements Runnable {
                     frameTime = 0;
                     fps = frames;
                     frames = 0;
-
-                    System.out.println("FPS: " + fps);
                 }
             }
 

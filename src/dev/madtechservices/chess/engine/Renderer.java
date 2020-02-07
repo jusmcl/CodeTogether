@@ -11,7 +11,7 @@ public class Renderer {
 
     private int pix_W, pix_H;
     private int[] pixels;
-    private Font font;
+    private Font font = Font.STANDARD;
 
     public Renderer(GameContainer gc) {
         pix_W = gc.getWidth();
@@ -22,9 +22,6 @@ public class Renderer {
     //Set the screen to a single color and overwrite the pixel data.
     public void clear() {
         Arrays.fill(pixels, 0);
-//        for (int i = 0; i < pixels.length; i++){
-//            pixels[i] += i;
-//        }
     }
 
     public void setPixel(int x, int y, int value){

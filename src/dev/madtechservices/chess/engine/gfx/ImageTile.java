@@ -2,7 +2,8 @@ package dev.madtechservices.chess.engine.gfx;
 
 public class ImageTile extends Image{
 
-    private int tileWidth, tileHeight;
+    private int tileWidth;
+    private int tileHeight;
 
     public ImageTile(String path, int tileWidth, int tileHeight) {
         super(path);
