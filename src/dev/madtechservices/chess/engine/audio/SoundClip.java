@@ -2,6 +2,7 @@ package dev.madtechservices.chess.engine.audio;
 
 import javax.sound.sampled.*;
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -13,6 +14,8 @@ public class SoundClip {
     public SoundClip(String path) {
 
         try {
+            File fileIn = new File(path);
+
             InputStream audioSrc = SoundClip.class.getResourceAsStream(path);
             InputStream bufferedIn = new BufferedInputStream(audioSrc);
             AudioInputStream ais = AudioSystem.getAudioInputStream(bufferedIn);
@@ -37,7 +40,7 @@ public class SoundClip {
 
         stop();
         clip.setFramePosition(0);
-        while(!clip.isRunning()) {
+        while(!(clip.isRunning())) {
             clip.start();
         }
     }
