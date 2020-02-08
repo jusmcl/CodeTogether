@@ -16,9 +16,9 @@ public class SoundClip {
         try {
             File fileIn = new File(path);
 
-            InputStream audioSrc = SoundClip.class.getResourceAsStream(path);
-            InputStream bufferedIn = new BufferedInputStream(audioSrc);
-            AudioInputStream ais = AudioSystem.getAudioInputStream(bufferedIn);
+//            InputStream audioSrc = SoundClip.class.getResourceAsStream(path);
+//            InputStream bufferedIn = new BufferedInputStream(audioSrc);
+            AudioInputStream ais = AudioSystem.getAudioInputStream(fileIn);
             AudioFormat baseFormat = ais.getFormat();
             AudioFormat decodeFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, baseFormat.getSampleRate(), 16, baseFormat.getChannels(), baseFormat.getChannels() * 2, baseFormat.getSampleRate(), false);
             AudioInputStream dais = AudioSystem.getAudioInputStream(decodeFormat, ais);

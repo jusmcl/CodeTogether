@@ -17,7 +17,7 @@ public class GameManager extends AbstractGame {
     public GameManager() {
         image = new Image("./res/test.png");
         clip = new SoundClip("./res/audio/testing.wav");
-        //clip.setVolume(-20);
+        clip.setVolume(-20);
     }
 
     @Override
